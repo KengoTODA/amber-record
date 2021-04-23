@@ -1,5 +1,5 @@
 # Dockerfile for Jupyter Notebook
-FROM openjdk:16
+FROM adoptopenjdk:16
 
 RUN apt-get update
 RUN apt-get install -y python3-pip
