@@ -1,5 +1,5 @@
 # Dockerfile for Jupyter Notebook
-FROM adoptopenjdk:16
+FROM openjdk:11
 
 RUN apt-get update
 RUN apt-get install -y python3-pip
@@ -38,7 +38,7 @@ RUN chown -R $NB_UID $HOME
 USER $NB_USER
 
 # Launch the notebook server
-ENV IJAVA_COMPILER_OPTS "--enable-preview --source=16"
+ENV IJAVA_COMPILER_OPTS "--enable-preview --source=15"
 WORKDIR $HOME
 CMD ["jupyter", "notebook", "--no-browser", "--ip", "0.0.0.0"]
 
