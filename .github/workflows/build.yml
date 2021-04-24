@@ -36,3 +36,8 @@ jobs:
           ./pro/bin/pro
           npm bin
           java publish/print_slideshow.java
+      - name: Upload slide
+        uses: actions/upload-artifact@v2
+        with:
+          name: Slide
+          path: pdf
